@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>WikiSearcher SideBar</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="side_panel.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+        <script src="../scripts/jquery-3.7.1.min.js"></script>
+        <script type="text/javascript" src="../MathJax/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <img id="loading" src="../image/loading_screen.gif">
+
+        <h1 id="title">Wiki-Searcher</h1>
+        <h1 id="word" class="data">Word</h1>
+        <img id="logo" src="../image/logo.png">
+        <div id="wordDiv"></div>
+        <button id="inputStartButton">단어 직접 입력</button>
+        <div id="userInputDiv">
+            <input type="text" class="userText" id="userTextInput" placeholder="직접 검색">
+            <button class="userText" id="textSendButton">검색</button><br>
+            <button id="inputCancelButton">입력 취소</button>
+        </div>  
+        <h1 class="data">Summary</h1>
+        <div id="summaryDiv" class="dataDiv"></div>
+        <h1 class="data">Explain</h1>
+        <div id="explainDiv" class="dataDiv"></div>
+        <h1 class="related data">Related Words</h1>
+        <div id="related" class="dataDiv related">
+            <ul id="relatedList"></ul>
+        </div>
+        <h1 class="homonym data">homonym words</h1>
+        <div id="homonym" class="dataDiv homonym">
+            <p>아래 리스트는 검색 결과가 원하는 정보가 아니었을 시 사용합니다. 순서가 빠를수록 원하는 정보일 확률이 높습니다.</p>
+            <ol id="homonymList"></ol>
+        </div>
+        <h1 id="history" class="data">Search History</h1>
+        <button id="deleteAllButton">모두 지우기</button>
+        <div id = "historyDiv">
+            <ul id="historyList"></ul>
+        </div>
+        <script src="side_panel.js"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+{
+    "manifest_version" : 3,
+    "name" : "WikiSearcher",
+    "description": "Use Drag to search word Definition. It will search wikipedia",
+    "version" : "1.0", 
+    "permissions" : [
+        "sidePanel", "contextMenus", "storage"
+    ],
+    "icons" : {
+        "16":"image/logo.png"
+    },
+
+    "background": {
+        "service_worker":"scripts/service_worker.js"
+    },
+
+    "web_accessible_resources" : [
+        {
+            "resources":["image/image_done.png", "image/image_ready.png"],
+            "matches": ["http://*/*", "https://*/*"]
+        }
+    ],
+    "content_scripts": [
+        {
+        "matches":["http://*/*", "https://*/*"],
+        "js":["scripts/jquery-3.7.1.min.js","scripts/content_script.js"]
+        }
+    ],
+
+    "side_panel" : {
+        "default_path" : "sidePanel/side_panel.html"
+    }
+
+    
+
+}
